@@ -263,13 +263,12 @@ attractionPage.addEventListener("click", () => {
 //Search Filter
 const search = document.getElementById("search");
 search.addEventListener("keyup", (e) => {
-  const cards = attraction_cards.children;
+  const cards = hotel_cards.children;
 
   const q = e.target.value.toLowerCase();
   Array.from(cards).forEach((card) => {
-    card.children[0].children[2].firstChild.innerText.startsWith(q)
-      ? (card.getElementsByClassName.display = "")
+    card.children[1].innerText.toLowerCase().startsWith(q)
+      ? (card.style.display = "")
       : (card.style.display = "none");
-    console.log(card.children[0].children[2].firstChild);
   });
 });
